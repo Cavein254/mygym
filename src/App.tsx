@@ -1,11 +1,10 @@
-import './App.css'
-
+import Navbar from '@/scenes/navbar'
 function App() {
 
   return (
-    <>
-      <h1>Basic starter</h1>
-    </>
+    <div className='app'>
+      <Navbar />
+    </div>
   )
 }
 
