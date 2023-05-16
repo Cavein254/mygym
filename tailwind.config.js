@@ -23,8 +23,13 @@ export default {
       fontFamily: {
         dmsans:["DM Sans", "sans-serif"],
         montserrat:["Montserrat", "sans-serrif"]
+      },
+      content:{
+        evolvetext:"url('./assets/EvolveText.png')",
+        abstactWaves:"url('./assets/AbstaractWaves.png')",
+        sparkles:"url('./assets/Sparkles.png')",
+        circles:"url('./assets/Circles.png')",
       }
-
     },
   },
   plugins: [],
