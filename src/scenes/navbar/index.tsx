@@ -19,7 +19,8 @@ const Navbar = ({isTopOfPage,selectedPage,setSelectedPage}:Props) => {
     const [isMenuToggled, setIsMenuToggled] = useState<boolean>(false);
     const navBackground = isTopOfPage ? "" : "bg-primary drop-shadow";
     return (
-        <nav className={`${navBackground} ${flexBetween} fixed top-0 z-30 w-full py-6`}>
+        <nav>
+        <div className={`${navBackground} ${flexBetween} fixed top-0 z-30 w-full py-6`}>
         <div className={`${flexBetween} mx-auto w-5/6 `}>
         <div className={`${flexBetween} gap-16 w-full`}>
             <img alt="logo" src={Logo} />
@@ -87,6 +88,7 @@ const Navbar = ({isTopOfPage,selectedPage,setSelectedPage}:Props) => {
                 </div>
             </div>
         )}
+        </div>
         </nav>
     )
 }
