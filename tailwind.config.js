@@ -26,7 +26,7 @@ export default {
       },
       content:{
         evolvetext:"url('./assets/EvolveText.png')",
-        abstactWaves:"url('./assets/AbstaractWaves.png')",
+        abstactWaves:"url('./assets/AbstractWaves.png')",
         sparkles:"url('./assets/Sparkles.png')",
         circles:"url('./assets/Circles.png')",
       }

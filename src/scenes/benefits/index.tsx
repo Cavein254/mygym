@@ -1,3 +1,5 @@
+import BenefitsPageGraphic from '@/assets/BenefitsPageGraphic.png';
+import ActionButton from "@/shared/ActionButton";
 import Htext from "@/shared/Htext";
 import { BenefitType, SelectedPage } from "@/shared/types";
 import { AcademicCapIcon, HomeModernIcon, UserGroupIcon } from "@heroicons/react/24/outline";
@@ -60,6 +62,33 @@ function Benefits({setSelectedPage}:Props) {
                     <Benefit key={benefit.title} icon={benefit.icon} title={benefit.title} description={benefit.description} setSelectedPage = {setSelectedPage}/>
                 ))}
             </motion.div>
+            <div className='mt-16 items-center justify-between gap-20 md:mt-20 md:flex'>
+                <img src={BenefitsPageGraphic} alt="main image" className="mx-auto"/>
+                <div>
+                    <div className="relative">
+                        <div className="before:absolute before:-top-20 before:-left-20 before:z-[-1] before:content-abstactWaves">
+                            <Htext>MILLIONS OF HAPPY CUSTOMERS GET {" "}
+                            <span className="text-primary-500">FIT</span></Htext>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <p className="my-5">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit magni dolore, numquam natus ad alias, consequuntur laborum tempora similique officiis facilis adipisci corporis voluptatem in consequatur dolorum pariatur illum vero!
+                    </p>
+                    <p className="mb-5">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi facilis enim quis eum, nemo omnis iusto vel! Maxime in, esse excepturi unde ipsam aliquid quas eaque quasi error cumque rerum!
+                    </p>
+                </div>
+                <div className="relative mt-16">
+                    <div className="before:absolute before:-bottom-20 before:right-40 before:z-[-1] before:content-sparkles">
+                        <ActionButton setSelectedPage={setSelectedPage}>
+                            Join Now
+                        </ActionButton>
+                    </div>
+                </div>
+            </div>
+
         </motion.div>
     </section>
   )
