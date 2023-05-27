@@ -6,7 +6,9 @@ import SponsorRedBull from "@/assets/SponsorRedBull.png"
 import UseMediaQuery from "@/hooks/UseMediaQuery"
 import ActionButton from "@/shared/ActionButton"
 import { SelectedPage } from "@/shared/types"
+import { motion } from "framer-motion"
 import AnchorLink from "react-anchor-link-smooth-scroll"
+
 
 type Props = {
     selectedPage:SelectedPage
@@ -19,7 +21,16 @@ const Home = ({selectedPage,setSelectedPage}:Props) => {
     <section id="home" className="gap-16 bg-gray-20 py-10 md:h-full md:pb-6">
         <div>
             <div className="md:flex mx-auto w-5/6 items-center justify-center md:h-5/6">
-                <div className="z-10 mt-32 md:basis-3/5">
+                <motion.div 
+                initial="hidden"
+                whileInView="visible"
+                viewport={{once:true, amount:0.5}}
+                transition={{duration:0.5}}
+                variants={{
+                    hidden:{opacity:0, x:-50},
+                    visible:{opacity:1, x:0}
+                }}
+                className="z-10 mt-32 md:basis-3/5">
                     <div className="md:-mt-20">
                         <div className="relative">
                             <div className="before:absolute before:z-[-1] before:-left-20 before:-top-20 md:before:content-evolvetext">
@@ -32,7 +43,7 @@ const Home = ({selectedPage,setSelectedPage}:Props) => {
                         Studio to get the Body Shaped That you dream of ....
                         Get that body NOW
                     </p>
-                </div>
+                </motion.div>
                 <div className="flex mt-8 items-center gap-8">
                     <ActionButton setSelectedPage={setSelectedPage}>
                         Join Now

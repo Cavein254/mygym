@@ -1,4 +1,4 @@
-import Home from '@/scenes/home';
+import Home from '@/scenes/home/page';
 import Navbar from '@/scenes/navbar';
 import { SelectedPage } from '@/shared/types';
 import { useEffect, useState } from 'react';
