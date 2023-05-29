@@ -1,6 +1,6 @@
 import Logo from "@/assets/Logo.png";
 import { SelectedPage } from "@/shared/types";
-
+import { motion } from "framer-motion";
 type Props = {
     setSelectedPage: (value:SelectedPage) => void;
 }
@@ -8,7 +8,16 @@ type Props = {
 const Footer = ({setSelectedPage}: Props) => {
   return (
     <footer className="bg-primary-100 py-16">
-        <div className="justify-center mx-auto w-5/6 gap-16 md:flex">
+        <motion.div className="justify-center mx-auto w-5/6 gap-16 md:flex"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{once:true, amount:0.5}}
+            transition={{duration:0.5}}
+            variants={{
+                hidden:{opacity:0, x:-50},
+                visible:{opacity:1, x:0}
+            }}
+            >
             <div className="mt-16 basis-1/2 md:mt-0">
                 <img alt='logo' src={Logo} />
                 <p className="my-5">
@@ -27,7 +36,7 @@ const Footer = ({setSelectedPage}: Props) => {
                 <p className="my-5">amet consectetur adipisicing</p>
                 <p>(+254)33-334-212</p>
             </div>
-        </div>
+        </motion.div>
     </footer>
   )
 }
