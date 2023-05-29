@@ -64,7 +64,7 @@ function OurClasses({setSelectedPage}: Props) {
                     visible:{opacity:1, x:0}
                 }}
             >
-                <div className='md:w-3/5'>
+                <div className='md:w-3/5 py-5'>
                     <Htext>OUR CLASSES</Htext>
                     <p className='py-5'>
                         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam animi dolorem at omnis cumque amet dolor a exercitationem fugiat ducimus error, delectus facilis, maiores magni sunt eos numquam optio eligendi!

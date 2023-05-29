@@ -6,7 +6,7 @@ type Props = {
 
 const Htext = ({children}:Props) => {
   return (
-    <h1 className="basis-3/5 font-montserrat text-3xl font-bold">
+    <h1 className="basis-3/5 font-montserrat text-3xl font-bold text-gray-600">
         {children}
     </h1>
   )
