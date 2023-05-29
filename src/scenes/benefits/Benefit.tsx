@@ -19,6 +19,7 @@ const Benefit = ({icon, setSelectedPage,description, title}:Props) => {
   return (
     <motion.div className='mt-5 border-2 rounded-md border-gray-200 px-5 py-16 text-center'
     variants={childVariant}
+    id="benefit"
     >
         <div className='mb-4 flex justify-center'>
             <div className='rounded-full border-2 border-gray-200 bg-primary-100 p-4'>
