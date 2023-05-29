@@ -1,11 +1,6 @@
 import Logo from "@/assets/Logo.png";
-import { SelectedPage } from "@/shared/types";
 import { motion } from "framer-motion";
-type Props = {
-    setSelectedPage: (value:SelectedPage) => void;
-}
-
-const Footer = ({setSelectedPage}: Props) => {
+const Footer = () => {
   return (
     <footer className="bg-primary-100 py-16">
         <motion.div className="justify-center mx-auto w-5/6 gap-16 md:flex"
